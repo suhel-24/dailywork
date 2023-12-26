@@ -11,6 +11,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(express.json());
 app.use("/api/db", require("./routes/dbrouter"));
+app.use("/api/goals", require("./routes/goalrouter"))
 
 app.listen(4000, () => {
   console.log(`Server is running on `);
